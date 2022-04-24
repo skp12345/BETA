@@ -14,9 +14,12 @@ import Main from "./components/main";
 import BetaDetails from "./components/main/betadetails";
 import Betalisting from "./components/main/betalisting";
 import EnrolledTest from "./components/main/enrolledtests";
+import Footer from "./components/main/footer";
 import Mainhome from "./components/main/home";
 import Login from "./components/main/login";
+import ResetPassword from "./components/main/resetPassword";
 import SignUp from "./components/main/signup";
+import Feedback from "./components/user/feedback";
 
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
       <BrowserRouter>
 
         <Routes>
+
+<Route element={<Feedback></Feedback>} path="feedback"></Route>
+
 
 <Route   element={<Admin></Admin>} path="Admin" >
   <Route element={<Admindashboard></Admindashboard>} path="admindashboard"/>
@@ -50,6 +56,8 @@ function App() {
 <Route element={<EnrolledTest></EnrolledTest>} path="EnrolledTest"/>
 <Route element={<Login></Login>} path="Login"/>
 <Route element={<SignUp></SignUp>} path="SignUP"/>
+<Route element={<ResetPassword></ResetPassword>} path="resetPassword"></Route>
+<Route element={<Footer></Footer>} path="Footer"></Route>
 
 </Route>
 
