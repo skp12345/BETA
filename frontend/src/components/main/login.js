@@ -17,7 +17,7 @@ const Login = () => {
       };
     return (
         <div>
-            <div className='container card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "20px auto",fontSize:".9rem", padding: "1rem", background: "rgb(76 175 80 / 14%)" }}>
+            <div className='container card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "50px auto",fontSize:".9rem", padding: "1rem", background: "rgb(76 175 80 / 14%)" }}>
             <Formik initialValues={userForm} onSubmit={userSubmit}>
           {({ values, handleSubmit, handleChange }) => (
         <form onSubmit={handleSubmit}  >

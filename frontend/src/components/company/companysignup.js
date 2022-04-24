@@ -17,7 +17,7 @@ const Companysignup = () => {
   };
   return (
     <div>
-    <div className=' card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "20px auto", padding: "1rem",fontSize:".9rem", background: "rgb(76 175 80 / 14%)" }}>
+    <div className=' card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "50px auto", padding: "1rem",fontSize:".9rem", background: "rgb(76 175 80 / 14%)" }}>
 
     <Formik initialValues={userForm} onSubmit={userSubmit}>
           {({ values, handleSubmit, handleChange }) => (
