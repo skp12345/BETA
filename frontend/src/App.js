@@ -15,6 +15,8 @@ import BetaDetails from "./components/main/betadetails";
 import Betalisting from "./components/main/betalisting";
 import EnrolledTest from "./components/main/enrolledtests";
 import Footer from "./components/main/footer";
+import Header1 from "./components/main/header1";
+import Header from "./components/main/header2";
 import Mainhome from "./components/main/home";
 import Login from "./components/main/login";
 import ResetPassword from "./components/main/resetPassword";
@@ -26,6 +28,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
+
+<Route element={<Header1></Header1>} path="Header1"></Route>
+
           <Route element={<Admin></Admin>} path="Admin">
             <Route
               element={<Admindashboard></Admindashboard>}

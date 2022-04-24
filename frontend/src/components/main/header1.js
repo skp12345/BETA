@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header1 = () => {
     return (
         <div>
+
             
+
+
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">β-Testing</a>
@@ -61,4 +64,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Header1;
