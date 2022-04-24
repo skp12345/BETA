@@ -9,7 +9,7 @@ const Companylogin = () => {
 
     return (
         <div className='start' >
-        <div className='container card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "20px auto",fontSize:".9rem", padding: "1rem", background: "rgb(76 175 80 / 14%)" }}>
+        <div className='container card' style={{ width: "22rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "50px auto",fontSize:".9rem", padding: "1rem", background: "rgb(76 175 80 / 14%)" }}>
             <form  >
                 <div >
                     <img style={{ width:"6rem",marginLeft:"110px", borderRadius:"100%", background:"rgb(76 175 80 / 14%)" }} src='https://freepikpsd.com/file/2019/10/user-login-png-transparent-6-Transparent-Images.png'></img>
