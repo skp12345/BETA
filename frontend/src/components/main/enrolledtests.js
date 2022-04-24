@@ -1,30 +1,53 @@
-import React from 'react'
+import React from "react";
 
 function EnrolledTest() {
-    return (
-        <div className="mx-5">
-            <div className='container card' style={{ width: "60rem", borderRadius: "5px", boxShadow: "3px 5px #888888", margin: "20px auto", padding: "2rem", background: "rgb(76 175 80 / 14%)" }}>
-                <h1>My Beta Test</h1>
-                <div class="row">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-       Tittle
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-    </div>
-  </div>
-
-
-</div>
+  return (
+    <div className="mx-5">
+      <div
+        className="container card"
+        style={{
+          width: "60rem",
+          borderRadius: "5px",
+          boxShadow: "3px 5px #888888",
+          margin: "20px auto",
+          padding: "2rem",
+          background: "rgb(76 175 80 / 14%)",
+        }}
+      >
+        <h1>My Beta Test</h1>
+        <div class="row">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Tittle
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the first item's accordion body.
                 </div>
-              
+              </div>
             </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default EnrolledTest;
