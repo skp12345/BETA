@@ -84,6 +84,9 @@ const Header = () => {
             <li><NavLink className="dropdown-item" to="/company/addtest">Add Test</NavLink></li>
             <li><NavLink className="dropdown-item" to="/company/companylogin">Company Login</NavLink></li>
             <li><NavLink className="dropdown-item" to="/company/companysignup">Company SignUp</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/main/resetpassword">User and Admin Reset password</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/feedback">User Feedback</NavLink></li>
+            <li><NavLink className="dropdown-item" to="/main/footer">Footer</NavLink></li>
             {/* <li><hr className="dropdown-divider"/></li>
             <li><a className="dropdown-item" href="#">Something else here</a></li> */}
           </ul>

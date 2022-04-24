@@ -1,4 +1,6 @@
 import React from 'react'
+import Footer from './footer';
+import Header from './header';
 
 const Mainhome = () => {
   return (
@@ -72,6 +74,9 @@ const Mainhome = () => {
         </div>
 
       </div>
+
+<Footer></Footer>
+
     </div>
 
 
