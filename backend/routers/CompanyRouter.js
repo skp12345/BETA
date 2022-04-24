@@ -1,17 +1,62 @@
-const express= require("express");
-const router= express.Router();
-const Model = require('../models/CompanyModel');
+const express = require("express");
+const router = express.Router();
+const Model = require("../models/CompanyModel");
 
-router.get('/home' , (req,res) =>{
-    console.log("request at user home");
-    res.send("response from user home");
-}
-);
+router.post("/add", (req, res) => {
+  // console.log(req.body);
 
-router.get('/add' , (req,res) =>{
-    console.log("request at user add");
-    res.send("response from user add");
-}
-);
+  new Model(req.body)
+    .save()
+    .then((data) => {
+      console.log("user data added");
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+      console.log(err);
+    });
+});
 
-module.exports= router;
+router.get("/getbyid/:id", (req, res) => {
+  console.log("request on getbyid");
+
+  console.log(req.params.id);
+
+  res.send("you have requested on /getbyid in user");
+});
+
+router.post("/authenticate", (req, res) => {
+  const formdata = req.body;
+
+  Model.findOne({ email: formdata.email, password: formdata.password })
+    .then((data) => {
+      if (data) {
+        console.log("login success");
+        res.status(200).json(data);
+      } else {
+        console.log("login failed");
+        res.status(400).json({ message: "failed" });
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json(err);
+    });
+});
+
+router.get("/getall", (req, res) => {
+  // console.log(req.body);
+
+  new Model(req.body)
+    .save()
+    .then((data) => {
+      console.log("user data added");
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+      console.log(err);
+    });
+});
+
+module.exports = router;

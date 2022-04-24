@@ -128,3 +128,7 @@
   opacity:0.6;
 }
 
+.user-login{
+  background: url(http://localhost:5000/images/login_bg.png);
+  height: '100vh'
+}
