@@ -17,7 +17,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import { Tooltip } from '@mui/material';
 import { Home, Login } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -160,7 +160,7 @@ export default function Header() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box  sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           {/* <IconButton
@@ -178,7 +178,7 @@ export default function Header() {
             component="div"
             sx={{ display: {  sm: 'block' } }}
           >
-            BETA
+           β-Testing
           </Typography>
           {/* <Search>
             <SearchIconWrapper>
@@ -192,10 +192,10 @@ export default function Header() {
           <Tooltip title="Login" sx={{ml: 2}}>
                 <IconButton color="inherit" onClick={e => navigate('/main/Mainhome')}>
                 <Home />
-                </IconButton>
-                
-                    
+                </IconButton>  
             </Tooltip>
+            <NavLink style={{color:"white"}} className="btn  mx-1" to="/main/login" >Login</NavLink>
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton
