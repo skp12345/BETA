@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header1 = () => {
     return (
         <div>
+
             
+
+
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">β-Testing</a>
@@ -50,7 +53,7 @@ const Header = () => {
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <NavLink to="/"  className="btn btn-outline-success mx-1" type="submit">Search</NavLink>
-        <NavLink className="btn btn-outline-danger mx-1" to="/main/login" >Login</NavLink>
+        <NavLink className="btn btn-danger mx-1" to="/main/login" >Login</NavLink>
         <NavLink className="btn btn-outline-danger mx-1" to="/main/signup" >SignUp</NavLink>
       </form>
     </div>
@@ -61,4 +64,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Header1;
