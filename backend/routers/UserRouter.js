@@ -18,11 +18,14 @@ router.post("/add", (req, res) => {
 });
 
 router.get("/getbyid/:id", (req, res) => {
-  console.log("request on getbyid");
-
-  console.log(req.params.id);
-
-  res.send("you have requested on /getbyid in user");
+  Model.findById(req.params.id)
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 });
 
 router.post("/authenticate", (req, res) => {

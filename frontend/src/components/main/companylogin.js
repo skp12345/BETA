@@ -2,7 +2,7 @@ import { Button, TextField } from '@mui/material';
 import { padding } from '@mui/system';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import Company from '.';
+import Company from '../company';
 
 const Companylogin = () => {
 

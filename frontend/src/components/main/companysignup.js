@@ -1,22 +1,22 @@
 import { Button, TextField } from "@mui/material";
+import { padding } from "@mui/system";
+import { Formik } from "formik";
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Formik } from "formik";
-import app_config from "../../config";
 import Swal from "sweetalert2";
+import app_config from "../../config";
 
-const SignUp = () => {
+const Companysignup = () => {
   const userForm = {
-    username: "",
-    password: "",
-    email: "",
+    username: String,
+    passowrd: String,
+    email: String,
   };
 
   const url = app_config.backend_url;
   const navigate = useNavigate();
 
   const userSubmit = (formdata) => {
-    console.log(formdata);
     console.log(formdata);
     fetch(url + "/user/add", {
       method: "POST",
@@ -31,9 +31,8 @@ const SignUp = () => {
       navigate("/main/login");
     });
   };
-
   return (
-    <div className="start">
+    <div>
       <div
         className=" card"
         style={{
@@ -65,56 +64,46 @@ const SignUp = () => {
               </h3>
               <div className="form-group">
                 <TextField
-                  id="username"
-                  onChange={handleChange}
-                  value={values.username}
                   size="small"
-                  label="User Name"
+                  id="outlined-basic"
+                  label="Coompany Name"
                   variant="outlined"
                   color="success"
                   className="w-100"
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
-              else.</small> */}
               </div>
               <div className="form-group mt-3">
                 <TextField
-                  id="email"
-                  onChange={handleChange}
-                  value={values.email}
                   size="small"
+                  id="outlined-basic"
                   label="Enter Email"
                   variant="outlined"
                   color="success"
                   className="w-100"
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone
-              else.</small> */}
               </div>
               <div className="form-group mt-3">
-                {/* <label style={{ paddingBottom: '10px' }} for="exampleInputPassword1">Password</label> */}
                 <TextField
-                  id="password"
-                  onChange={handleChange}
-                  value={values.password}
                   size="small"
                   style={{ paddingBottom: "20px" }}
+                  id="outlined-basic"
                   label="PassWord"
                   variant="outlined"
                   color="success"
-                  type="password"
                   className="w-100"
                 />
               </div>
               <div style={{ textAlign: "center" }}>
                 {" "}
                 <span>Already a member?</span>{" "}
-                <NavLink style={{ fontSize: "1.1rem" }} to="/main/login">
+                <NavLink
+                  style={{ fontSize: "1.1rem" }}
+                  to="/company/companylogin"
+                >
                   <b>Login</b>
                 </NavLink>
               </div>
               <Button
-                type="submit"
                 className="w-100 mt-3"
                 variant="contained"
                 color="success"
@@ -129,4 +118,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Companysignup;

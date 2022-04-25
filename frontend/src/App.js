@@ -7,12 +7,12 @@ import Company from "./components/company";
 import Addtest from "./components/company/addtest";
 import Companydashboard from "./components/company/companydashboard";
 import Companyheader from "./components/company/companyheader";
-import Companylogin from "./components/company/companylogin";
-import Companysignup from "./components/company/companysignup";
 import Compnayfooter from "./components/company/compnayfooter";
 import Main from "./components/main";
 import BetaDetails from "./components/main/betadetails";
 import Betalisting from "./components/main/betalisting";
+import Companylogin from "./components/main/companylogin";
+import Companysignup from "./components/main/companysignup";
 import EnrolledTest from "./components/main/enrolledtests";
 import Footer from "./components/main/footer";
 import Mainhome from "./components/main/home";
@@ -45,14 +45,6 @@ function App() {
               path="companyfooter"
             />
             <Route
-              element={<Companylogin></Companylogin>}
-              path="companylogin"
-            />
-            <Route
-              element={<Companysignup></Companysignup>}
-              path="companysignup"
-            />
-            <Route
               element={<Companyheader></Companyheader>}
               path="companyheader"
             />
@@ -62,6 +54,14 @@ function App() {
             <Route element={<BetaDetails></BetaDetails>} path="betadetails" />
             <Route element={<Betalisting></Betalisting>} path="betalisting" />
             <Route element={<Mainhome></Mainhome>} path="Mainhome" />
+            <Route
+              element={<Companylogin></Companylogin>}
+              path="companylogin"
+            />
+            <Route
+              element={<Companysignup></Companysignup>}
+              path="companysignup"
+            />
             <Route
               element={<EnrolledTest></EnrolledTest>}
               path="EnrolledTest"

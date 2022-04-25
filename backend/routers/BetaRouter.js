@@ -17,14 +17,6 @@ router.post("/add", (req, res) => {
     });
 });
 
-router.get("/getbyid/:id", (req, res) => {
-  console.log("request on getbyid");
-
-  console.log(req.params.id);
-
-  res.send("you have requested on /getbyid in user");
-});
-
 router.post("/authenticate", (req, res) => {
   const formdata = req.body;
 
@@ -55,6 +47,17 @@ router.get("/getall", (req, res) => {
     .catch((err) => {
       console.error(err);
       console.log(err);
+    });
+});
+
+router.get("/getbyid/:id", (req, res) => {
+  Model.findById(req.params.id)
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
     });
 });
 

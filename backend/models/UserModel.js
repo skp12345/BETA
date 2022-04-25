@@ -1,13 +1,14 @@
-const mongoose = require('../connection');
+const mongoose = require("../connection");
 
 const schema = new mongoose.Schema({
-    username : String,
-    passowrd :String,
-    email : String,
-    age : Number,
-    createdAt: {type:Date, default: new Date()}
-})
+  username: String,
+  password: String,
+  email: String,
+  age: Number,
+  isAdmin: { type: Boolean, default: false },
+  createdAt: { type: Date, default: new Date() },
+});
 
-const model= mongoose.model("users",schema);
+const model = mongoose.model("users", schema);
 
-module.exports=model;
+module.exports = model;

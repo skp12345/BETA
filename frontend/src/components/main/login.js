@@ -23,7 +23,7 @@ const Login = () => {
     // 3. Data
     // 4. Data format
 
-    fetch(url + "/user/checklogin", {
+    fetch(url + "/user/authenticate", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {
@@ -49,7 +49,9 @@ const Login = () => {
       .then((data) => {
         // storing value in session
         sessionStorage.setItem("user", JSON.stringify(data));
-        // navigate();
+        if (data.isAdmin) {
+          navigate("/admin");
+        }
       });
   };
 

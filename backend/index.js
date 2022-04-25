@@ -1,5 +1,6 @@
 // importing express
 const express = require("express");
+const cors = require("cors");
 
 //importing userRouter
 const UserRouter = require("./routers/UserRouter");
@@ -9,6 +10,12 @@ const CompanyRouter = require("./routers/CompanyRouter");
 const app = express();
 const port = 5000;
 
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+  })
+);
+app.use(express.json());
 app.use(express.static("./static"));
 
 // using middleware
