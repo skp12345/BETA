@@ -122,7 +122,7 @@ const Companylogin = () => {
                 </Button>
                 <div className="row">
                   <div className="col-md-6">
-                    <Link to="/main/companysignup">Not Registered Yet</Link>
+                    <NavLink to="/main/companysignup">Not Registered Yet</NavLink>
                   </div>
                   <div className="col-md-6">
                     <NavLink to="/main/resetpassword" className="float-end">

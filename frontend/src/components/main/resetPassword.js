@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const ResetPassword = () => {
   return (
-    <div style={{ paddingTop: "10px" }}>
+    <div className='password' style={{ paddingTop: "10px" }}>
       <div className='container card'
         style={{
           width: "25rem",
