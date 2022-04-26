@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   return (
-    <div className="user-login">
+    <div className="user-login" style={{padding:"40px"}}>
       <div
         className="container card"
         style={{
@@ -81,7 +81,7 @@ const Login = () => {
                     background: "rgb(76 175 80 / 14%)",
                   }}
                   alt=""
-                  src="https://freepikpsd.com/file/2019/10/user-login-png-transparent-6-Transparent-Images.png"
+                  src="http://cdn.onlinewebfonts.com/svg/img_525162.png"
                 ></img>
               </div>
               <h3 style={{ textAlign: "center", padding: "1rem" }}>
