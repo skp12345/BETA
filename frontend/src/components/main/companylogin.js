@@ -55,9 +55,9 @@ const Companylogin = () => {
 
   return (
     <div
-      className="col-md-5 mx-auto"
+      className="col-md-5 mx-auto company-login "
       style={{
-        marginTop: "10rem",
+        marginTop: "2rem",
         boxShadow: "2px 2px 1px 3px rgba(0, 0, 0, 0.3)",
       }}
     >
@@ -125,9 +125,9 @@ const Companylogin = () => {
                     <Link to="/main/companysignup">Not Registered Yet</Link>
                   </div>
                   <div className="col-md-6">
-                    <Link to="/main/resetpassword" className="float-end">
+                    <NavLink to="/main/resetpassword" className="float-end">
                       Forgot Password
-                    </Link>
+                    </NavLink>
                   </div>
                 </div>
               </form>

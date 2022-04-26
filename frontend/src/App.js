@@ -22,6 +22,7 @@ import EnrolledTest from "./components/user/enrolledTest";
 import User from "./components/user";
 import ManageFeedbacks from "./components/company/manageFeedbacks";
 import AddFeedback from "./components/user/addFeedback";
+import ResetPassword from "./components/main/resetPassword";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -55,6 +56,7 @@ function App() {
             <Route element={<Companysignup />} path="companysignup" />
             <Route element={<Login />} path="Login" />
             <Route element={<SignUp />} path="SignUP" />
+            <Route element={<ResetPassword></ResetPassword>} path="ResetPassword"/>
           </Route>
 
           <Route element={<Navigate to="/main/Mainhome" />} path="/" />

@@ -159,12 +159,11 @@ export default function Sidebar({ children, sidebarOptions, title }) {
           >
             Logout
           </Button>
-          <IconButton sx={{ p: 0 }}>
+          {/* <IconButton sx={{ p: 0 }}>
             <Avatar
-              alt={currentUser.username}
               src={url + "/uploads/" + currentUser.avatar}
             />
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

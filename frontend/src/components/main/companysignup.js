@@ -35,7 +35,7 @@ const Companysignup = () => {
     });
   };
   return (
-    <div>
+    <div className="company-signup">
       <div
         className=" card"
         style={{
@@ -45,7 +45,7 @@ const Companysignup = () => {
           margin: "50px auto",
           padding: "1rem",
           fontSize: ".9rem",
-          background: "rgb(76 175 80 / 14%)",
+          // background: "rgb(76 175 80 / 14%)",
         }}
       >
         <Formik initialValues={companyForm} onSubmit={companySubmit}>

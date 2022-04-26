@@ -33,7 +33,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="start">
+    <div className="user-signup"style={{padding:"10px"}} >
       <div
         className=" card"
         style={{
@@ -43,7 +43,7 @@ const SignUp = () => {
           margin: "50px auto",
           padding: "1rem",
           fontSize: ".9rem",
-          background: "rgb(76 175 80 / 14%)",
+          // background: "rgb(76 175 80 / 14%)",
         }}
       >
         <Formik initialValues={userForm} onSubmit={userSubmit}>
@@ -57,7 +57,7 @@ const SignUp = () => {
                     borderRadius: "100%",
                     background: "rgb(76 175 80 / 14%)",
                   }}
-                  src="https://freepikpsd.com/file/2019/10/user-login-png-transparent-6-Transparent-Images.png"
+                  src="http://cdn.onlinewebfonts.com/svg/img_525162.png"
                 ></img>
               </div>
               <h3 style={{ textAlign: "center", padding: "1rem" }}>

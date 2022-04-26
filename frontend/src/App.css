@@ -127,8 +127,45 @@
   font-size:13px;
   opacity:0.6;
 }
-
+/* 
 .user-login{
-  background: url(http://localhost:5000/images/login_bg.png);
-  height: '100vh'
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 90vh;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* .user-signup{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 90vh;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+/* .company-login{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 90vh;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.main-back{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 100vh;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.company-signup{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 110vh;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

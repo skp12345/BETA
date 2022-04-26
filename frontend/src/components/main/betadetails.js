@@ -69,14 +69,15 @@ function BetaDetails() {
     if (!loading) {
       return (
         <div
-          className="container card"
+          className="container card "
           style={{
             width: "50rem",
             borderRadius: "5px",
             boxShadow: "3px 5px #888888",
             margin: "20px auto",
-            padding: "2rem",
-            background: "rgb(76 175 80 / 14%)",
+            padding: "3rem",
+           
+            // background: "rgb(76 175 80 / 14%)",
           }}
         >
           <h1>Beta Test Details</h1>
