@@ -65,7 +65,7 @@ const Companylogin = () => {
         <CardContent>
           <h4 className="text-center">Login Here</h4>
           <div className="row mt-5 mb-5">
-            <div className="col-md-6">
+            <div className="col-md-6 mt-1">
               <Button
                 variant="contained"
                 color="error"
@@ -75,7 +75,7 @@ const Companylogin = () => {
                 Google
               </Button>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mt-1">
               <Button
                 variant="contained"
                 className="w-100"
@@ -95,7 +95,7 @@ const Companylogin = () => {
                   label="Enter Email"
                   variant="outlined"
                   color="success"
-                  className="w-100 mt-5"
+                  className="w-100 mt-3"
                   id="email"
                   value={values.email}
                   onChange={handleChange}
@@ -106,7 +106,7 @@ const Companylogin = () => {
                   label="PassWord"
                   variant="outlined"
                   color="success"
-                  className="w-100 mt-5"
+                  className="w-100 mt-3"
                   type="password"
                   id="password"
                   value={values.password}
@@ -115,7 +115,7 @@ const Companylogin = () => {
 
                 <Button
                   type="submit"
-                  className="w-100 mt-5"
+                  className="w-100 mt-4"
                   variant="contained"
                 >
                   SUBMIT

@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   return (
-    <div className="user-login" style={{padding:"40px"}}>
+    <div className="user-login" style={{paddingTop:"40px"}}>
       <div
         className="container card"
         style={{
