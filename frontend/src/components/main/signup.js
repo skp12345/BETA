@@ -33,7 +33,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="user-signup"style={{padding:"10px"}} >
+    <div className="user-signup"style={{paddingTop:"10px"}} >
       <div
         className=" card"
         style={{
