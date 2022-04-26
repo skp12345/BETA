@@ -1,89 +1,50 @@
-.footer-clean {
-    margin-top: 10vh;
-    padding:50px 0;
-    background-color:#fff;
-    color:#fff;
-    background-color: rgba(0, 0, 0, 0.589);
-  }
+.hey {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 2px;
+  border-radius: 40px;
+  width: 55px;
+  padding: 15px;
+  text-decoration: none;
+}
+.facebook {
+  background-color: #3b5998;
   
-  .footer-clean h3 {
-    margin-top:0;
-    margin-bottom:12px;
-    font-weight:bold;
-    font-size:16px;
-  }
+}
+.insta {
+  background-color: #ea4cbb;
   
-  .footer-clean ul {
-    padding:0;
-    list-style:none;
-    line-height:1.6;
-    font-size:14px;
-    margin-bottom:0;
-  }
+  margin-left: 10px;
+}
+.twitter {
+  background-color: #55acee;
   
-  .footer-clean ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
+  margin-left: 10px;
+}
+.mail {
+  background-color: #dd4b39;
+ 
+  margin-left: 10px;
+}
+.phone {
+  background-color: #cb2027;
   
-  .footer-clean ul a:hover {
-    opacity:1;
-  }
-  
-  .footer-clean .item.social {
-    text-align:right;
-  }
-  
-  @media (max-width:767px) {
-    .footer-clean .item {
-      text-align:center;
-      padding-bottom:20px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-clean .item.social {
-      text-align:center;
-    }
-  }
-  
-  .footer-clean .item.social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin-left:10px;
-    margin-top:22px;
-    color:inherit;
-    opacity:0.75;
-  }
-  
-  .footer-clean .item.social > a:hover {
-    opacity:0.9;
-  }
-  
-  @media (max-width:991px) {
-    .footer-clean .item.social > a {
-      margin-top:40px;
-    }
-  }
-  
-  @media (max-width:767px) {
-    .footer-clean .item.social > a {
-      margin-top:10px;
-    }
-  }
-  
-  .footer-clean .copyright {
-    margin-top:14px;
-    margin-bottom:0;
-    font-size:13px;
-    opacity:0.6;
-  }
-  
-  
+  margin-left: 10px;
+}
+.hi {
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+  font-size: 20px;
+}
+.me {
+  text-align: center;
+}
+.i {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+nb-action {
+  cursor: pointer;
+}

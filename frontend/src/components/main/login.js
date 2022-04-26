@@ -7,7 +7,7 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const url = app_config.api_url;
+  const url = app_config.backend_url;
   const navigate = useNavigate();
 
   const loginForm = {
@@ -29,30 +29,31 @@ const Login = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    })
-      .then((res) => {
-        console.log(res.status);
-        if (res.status === 200) {
-          Swal.fire({
-            icon: "success",
-            title: "Success",
-            text: "Loggedin Successfully",
-          });
-        } else if (res.status === 300) {
-          Swal.fire({
-            icon: "error",
-            title: "Failed",
-            text: "Loggedin Failed",
-          });
-        }
-      })
-      .then((data) => {
-        // storing value in session
-        sessionStorage.setItem("user", JSON.stringify(data));
-        if (data.isAdmin) {
-          navigate("/admin");
-        }
-      });
+    }).then((res) => {
+      console.log(res.status);
+      if (res.status === 200) {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Loggedin Successfully",
+        });
+        res.json().then((data) => {
+          // storing value in session
+          sessionStorage.setItem("user", JSON.stringify(data));
+          if (data.isAdmin) {
+            navigate("/admin");
+          } else {
+            navigate("/user/enrolled");
+          }
+        });
+      } else if (res.status === 300) {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "Loggedin Failed",
+        });
+      }
+    });
   };
 
   return (
@@ -113,6 +114,7 @@ const Login = () => {
                   variant="outlined"
                   color="success"
                   className="w-100"
+                  type="password"
                 />
               </div>
               <div
@@ -128,7 +130,12 @@ const Login = () => {
                   Check me out
                 </label>
               </div>
-              <Button className="w-100" variant="contained" color="success">
+              <Button
+                type="submit"
+                className="w-100"
+                variant="contained"
+                color="success"
+              >
                 Login
               </Button>
               <div className="mt-3">

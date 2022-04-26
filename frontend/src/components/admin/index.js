@@ -1,16 +1,24 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom';
-import Sidebar from '../sidebar';
+import { Add } from "@mui/icons-material";
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../sidebar";
 
 const Admin = () => {
+  const sidebarOptions = [
+    {
+      name: "Manage Companies",
+      icon: <Add />,
+      link: "/admin/addtest",
+    },
+  ];
+
   return (
     <div>
-        <h1>Admin here</h1>
-        <Sidebar>
+      <Sidebar sidebarOptions={sidebarOptions} title="Admin Dashboard">
         <Outlet />
-        </Sidebar>
+      </Sidebar>
     </div>
-  )
-}
+  );
+};
 
 export default Admin;

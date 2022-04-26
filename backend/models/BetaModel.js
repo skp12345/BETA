@@ -2,11 +2,16 @@ const mongoose = require("../connection");
 
 const schema = new mongoose.Schema({
   title: String,
-  category: String,
+  description: String,
+  type: String,
+  eligibility: String,
+  users: [{ type: mongoose.Types.ObjectId, ref: "Users" }],
+  forms: [{ type: mongoose.Types.ObjectId, ref: "forms" }],
   thumbnail: String,
+  startDate: { type: Date, default: new Date() },
   link: String,
+  endDate: Date,
   company: { type: mongoose.Types.ObjectId, ref: "companies" },
-  feedbacks: [{ type: mongoose.Types.ObjectId, ref: "feedbacks" }],
   createdAt: { type: Date, default: new Date() },
 });
 

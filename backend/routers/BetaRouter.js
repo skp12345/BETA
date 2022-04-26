@@ -40,6 +40,7 @@ router.get("/getall", (req, res) => {
   // console.log(req.body);
 
   Model.find({})
+    .populate("company")
     .then((data) => {
       console.log("user data fetched");
       res.status(200).json(data);
@@ -52,6 +53,52 @@ router.get("/getall", (req, res) => {
 
 router.get("/getbyid/:id", (req, res) => {
   Model.findById(req.params.id)
+    .then((data) => {
+      // console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.get("/getbyuser/:id", (req, res) => {
+  Model.find({ users: req.params.id })
+    .populate("forms")
+    .then((data) => {
+      // console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.delete("/delete/:id", (req, res) => {
+  Model.findByIdAndDelete(req.params.id)
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.put("/pushupdate/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, { $push: req.body })
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.get("/getbycompany/:id", (req, res) => {
+  Model.find({ company: req.params.id })
+    .populate("forms")
     .then((data) => {
       console.log(data);
       res.status(200).json(data);
