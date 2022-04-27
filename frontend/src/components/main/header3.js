@@ -17,6 +17,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { LocalGasStationOutlined, Login, LoginOutlined, LoginSharp } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -123,15 +124,15 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      {/* <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+      </MenuItem> */}
+      {/* <MenuItem>
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
@@ -142,7 +143,7 @@ export default function PrimarySearchAppBar() {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           onClick={(e) => navigate("/main/signup")}
@@ -202,7 +203,7 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -210,32 +211,37 @@ export default function PrimarySearchAppBar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { sm: "block" } }}
           >
-            MUI
+            β-Testing
           </Typography>
-          <Button color="inherit" onClick={(e) => navigate("/main/home")}>
+          <Button color="inherit" sx={{ml: 3}} onClick={(e) => navigate("/main/Mainhome")}>
             Home
+          </Button>
+          <Button color="inherit" sx={{ml: 3}} onClick={(e) => navigate("/main/betalisting")}>
+            Browse BETA Tests
           </Button>
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={(e) => navigate("/main/login")}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+           
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companysignup")}>
+              Company Signup
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companysignup")}>
+              Company Login
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/signup")}>
+              User Signup
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/login")}>
+              User Login
+            </Button>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

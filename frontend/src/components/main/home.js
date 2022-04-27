@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "./footer";
 import Header from "./header1";
 import app_config from "../../config";
+import { Facebook, Google, Instagram, LinkedIn } from "@mui/icons-material";
 
 const Mainhome = () => {
   const url = app_config.backend_url;
@@ -32,10 +33,10 @@ const Mainhome = () => {
               >
                 <div className="carousel-container">
                   <div className="container">
-                    <h2 className="animate__animated animate__fadeInDown">
+                    <h2 style={{fontSize:"3rem"}} className="animate__animated animate__fadeInDown">
                       Beta Testing Solved.
                     </h2>
-                    <p className="animate__animated animate__fadeInUp">
+                    <p style={{fontSize:"1.5rem",textAlign:"center"}} className="animate__animated animate__fadeInUp">
                       Beta test with real people in real environments. You get
                       real-world engagement data & feedback to help scale your
                       product. For Android, iOS, websites, desktop, and tech
@@ -450,7 +451,7 @@ const Mainhome = () => {
             </div>
           </div>
         </div>
-        <div id="portfolio" className="portfolio-area area-padding fix">
+        {/* <div id="portfolio" className="portfolio-area area-padding fix">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -601,7 +602,7 @@ const Mainhome = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div id="pricing" className="pricing-area area-padding">
           <div className="container">
             <div className="row">
@@ -754,7 +755,7 @@ const Mainhome = () => {
                 </div>
               </div>
               <div className="row">
-                <div className="col-md-4 col-sm-4 col-xs-12">
+                <div className=" cardcol-md-4 col-sm-4 col-xs-12">
                   <div className="single-blog">
                     <div className="single-blog-img">
                       <a href="https://www.zeebiz.com/technology/apps/news-pubg-mobile-battlegrounds-mobile-india-beta-now-available-for-everyone-follow-these-steps-to-download-158926">
@@ -919,22 +920,26 @@ const Mainhome = () => {
                       <ul>
                         <li>
                           <a href="#">
-                            <i className="fa fa-facebook"></i>
+                            {/* <i className="fa fa-facebook"></i> */}
+                            <Facebook/>
                           </a>
                         </li>
                         <li>
                           <a href="#">
-                            <i className="fa fa-twitter"></i>
+                            {/* <i className="fa fa-twitter"></i> */}
+                            <Google/>
                           </a>
                         </li>
                         <li>
                           <a href="#">
-                            <i className="fa fa-instagram"></i>
+                            {/* <i className="fa fa-instagram"></i> */}
+                            <Instagram/>
                           </a>
                         </li>
                         <li>
                           <a href="#">
-                            <i className="fa fa-linkedin"></i>
+                            {/* <i className="fa fa-linkedin"></i> */}
+                            <LinkedIn/>
                           </a>
                         </li>
                       </ul>
@@ -949,10 +954,10 @@ const Mainhome = () => {
                     <p></p>
                     <div className="footer-contacts">
                       <p>
-                        <span>Tel:</span> +917565919623
+                        <span>Tel:</span> +8808863622
                       </p>
                       <p>
-                        <span>Email:</span> vieshyal@gmail.com
+                        <span>Email:</span> surajanshraj@com
                       </p>
                       <p>
                         <span>Working Hours:</span> 9am-5pm

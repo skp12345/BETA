@@ -41,7 +41,7 @@ const Companylogin = () => {
           // storing value in session
           sessionStorage.setItem("company", JSON.stringify(data));
 
-          navigate("/company");
+          navigate("/company/addtest");
         });
       } else if (res.status === 300) {
         Swal.fire({

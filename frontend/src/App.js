@@ -23,6 +23,7 @@ import User from "./components/user";
 import ManageFeedbacks from "./components/company/manageFeedbacks";
 import AddFeedback from "./components/user/addFeedback";
 import ResetPassword from "./components/main/resetPassword";
+import Header1 from "./components/main/header1";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -30,8 +31,12 @@ function App() {
     <div>
       <BrowserRouter>
         {/* <Toaster position="top-right" /> */}
+        
 
         <Routes>
+<Route element={<Header1></Header1>} path="Header1"></Route>
+
+
           <Route element={<Admin />} path="Admin">
             <Route element={<Admindashboard />} path="admindashboard" />
             <Route element={<Adminfooter />} path="adminfooter" />
@@ -42,6 +47,7 @@ function App() {
             <Route element={<ManageTest />} path="managetest" />
             <Route element={<Companydashboard />} path="companydashboard" />
             <Route element={<ManageFeedbacks />} path="managefeedbacks" />
+
           </Route>
           <Route element={<User />} path="user">
             <Route element={<EnrolledTest />} path="enrolled" />

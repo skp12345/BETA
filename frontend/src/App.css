@@ -178,3 +178,8 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+  .shadow {
+    box-shadow: -3px -5px shadowpx rgb(red, green, rgb(199, 194, 194));
+  }

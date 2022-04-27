@@ -18,6 +18,7 @@ router.post("/add", (req, res) => {
 });
 router.post("/authenticate", (req, res) => {
   const formdata = req.body;
+  console.log(formdata);
 
   Model.findOne({ email: formdata.email, password: formdata.password })
     .then((data) => {
