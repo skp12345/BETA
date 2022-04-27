@@ -203,6 +203,7 @@
   background-attachment: fixed;  
 }
 
+
 .userback{
   /* background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg); */
   background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);  height: 110vh;
@@ -212,6 +213,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
 
   .shadow {
     box-shadow: -3px -5px shadowpx rgb(red, green, rgb(199, 194, 194));

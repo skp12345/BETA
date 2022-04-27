@@ -15,7 +15,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import { LocalGasStationOutlined, Login, LoginOutlined, LoginSharp } from "@mui/icons-material";
 
@@ -102,8 +102,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
     </Menu>
   );
 
@@ -146,7 +146,7 @@ export default function PrimarySearchAppBar() {
       </MenuItem> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/signup")}
+          onClick={e => navigate("/main/signup")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -155,12 +155,15 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Signup</p>
+        {/* <p>Signup</p> */}
+        <NavLink to="/main/signup">SignUp</NavLink>
+
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/login")}
-          size="large"
+        
+        onClick={e => navigate("/main/login")}
+        size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
@@ -168,11 +171,11 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Login</p>
+        <NavLink to="/main/login">Login</NavLink>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/companysignup")}
+          onClick={e => navigate("/main/companysignup")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -181,11 +184,11 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Company Signup</p>
+        <NavLink to="/main/companysignup"> Company SignUp</NavLink>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/companylogin")}
+          onClick={e => navigate("/main/companylogin")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -194,14 +197,14 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Company Login</p>
+        <NavLink to="/main/companylogin">Company Login</NavLink>
       </MenuItem>
     </Menu>
   );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar color="danger" position="static">
+      <AppBar  style={{backgroundColor: "#404040"}} position="static">
         <Toolbar>
           {/* <IconButton
             size="large"
