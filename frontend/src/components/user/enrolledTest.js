@@ -77,10 +77,10 @@ function EnrolledTest() {
             <AccordionDetails>
               <h5>Username : {description}</h5>
               <h5>Type : {type}</h5>
-              <h5>Link : {link}</h5>
+              <h5>Link : <a style={{display:"inline"}} href={link}>{link}</a> </h5> 
               <h5>Created At : {timeAgo.format(new Date(createdAt))}</h5>
 
-              <h3 className="mt-5">Feedback Forms for this test</h3>
+              <h4 className="mt-5">Feedback Forms for this test</h4>
               <hr />
               {forms.map(({ _id, answers, endDate, createdAt }) => (
                 <Accordion>
@@ -125,10 +125,11 @@ function EnrolledTest() {
           boxShadow: "3px 5px #888888",
           margin: "20px auto",
           padding: "2rem",
-          background: "rgb(76 175 80 / 14%)",
+          // background: "rgb(76 175 80 / 14%)",
+          background:"#e9ecef"
         }}
       >
-        <h1>My Beta Test</h1>
+        <h2>My Beta Test</h2>
         {displayData()}
       </div>
     </div>
