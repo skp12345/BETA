@@ -136,7 +136,7 @@ const Companysignup = () => {
                 <span>Already a member?</span>{" "}
                 <NavLink
                   style={{ fontSize: "1.1rem" }}
-                  to="/company/companylogin"
+                  to="/main/companylogin"
                 >
                   <b>Login</b>
                 </NavLink>

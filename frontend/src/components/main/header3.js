@@ -233,7 +233,7 @@ export default function PrimarySearchAppBar() {
             <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companysignup")}>
               Company Signup
             </Button>
-            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companysignup")}>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companylogin")}>
               Company Login
             </Button>
             <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/signup")}>

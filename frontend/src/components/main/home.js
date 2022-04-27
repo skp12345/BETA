@@ -226,7 +226,7 @@ const Mainhome = () => {
           </div>
         </div>
 
-        <div id="services" className="services-area area-padding">
+        {/* <div id="services" className="services-area area-padding">
           <div className="container">
             <div className="row">
               <div className="col-md-12 col-sm-12 col-xs-12">
@@ -340,7 +340,7 @@ const Mainhome = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* <div
           id="team"
