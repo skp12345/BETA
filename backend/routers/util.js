@@ -1,33 +1,33 @@
 const multer = require("multer");
 const router = require("express").Router();
-// import SMTPClient from "emailjs";
+import SMTPClient from "emailjs";
 
 
-// const initMail = () => {
-//   return new SMTPClient({
-//     user: "yourmail@gmail.com",
-//     password: "uvzuapdfsegbdctg",
-//     host: "smtp.gmail.com",
-//     ssl: true,
-//   });
-// };
+const initMail = () => {
+  return new SMTPClient({
+    user: "yourmail@gmail.com",
+    password: "uvzuapdfsegbdctg",
+    host: "smtp.gmail.com",
+    ssl: true,
+  });
+};
 
-// const client = initMail();
-// const sendMail = (to, subject, text) => {
-//   client.send(
-//     {
-//       text: text,
-//       from: "yourmail@mail.com",
-//       to: to,
+const client = initMail();
+const sendMail = (to, subject, text) => {
+  client.send(
+    {
+      text: text,
+      from: "yourmail@mail.com",
+      to: to,
 
-//       cc: "",
-//       subject: subject,
-//     },
-//     (err, message) => {
-//       console.log(err || message);
-//     }
-//   );
-// };
+      cc: "",
+      subject: subject,
+    },
+    (err, message) => {
+      console.log(err || message);
+    }
+  );
+};
 
 router.post("/sendmail", (req, res) => {
   const data = req.body;
