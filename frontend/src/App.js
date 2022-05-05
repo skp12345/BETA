@@ -25,6 +25,7 @@ import AddFeedback from "./components/user/addFeedback";
 import ResetPassword from "./components/main/resetPassword";
 import Header1 from "./components/main/header1";
 import Feedback from "./components/user/feedback";
+import UserResetPassword from "./components/main/userresetpassword";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -65,6 +66,8 @@ function App() {
             <Route element={<Login />} path="Login" />
             <Route element={<SignUp />} path="SignUP" />
             <Route element={<ResetPassword></ResetPassword>} path="ResetPassword"/>
+            <Route element={<UserResetPassword></UserResetPassword>} path="UserResetPassword"/>
+            
           </Route>
 
           <Route element={<Navigate to="/main/Mainhome" />} path="/" />

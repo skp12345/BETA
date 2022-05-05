@@ -59,12 +59,27 @@ const Companylogin = () => {
       style={{
         marginTop: "2rem",
         boxShadow: "2px 2px 1px 3px rgba(0, 0, 0, 0.3)",
+      width:"28rem",
+      background:'#CCCCCC',
+      borderRadius: "5px",
       }}
     >
       <Card>
         <CardContent>
-          <h4 className="text-center">Login Here</h4>
-          <div className="row mt-5 mb-5">
+        <div>
+                <img
+                  style={{
+                    width: "6rem",
+                    marginLeft: "10rem",
+                    borderRadius: "100%",
+                    background: "rgb(76 175 80 / 14%)",
+                  }}
+                  alt=""
+                  src="http://cdn.onlinewebfonts.com/svg/img_525162.png"
+                ></img>
+              </div>
+          <h3  className="text-center" style={{margin:"20px"}}>Login Here</h3>
+          <div className="row mt-3 mb-5">
             <div className="col-md-6 mt-1">
               <Button
                 variant="contained"

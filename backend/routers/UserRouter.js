@@ -17,6 +17,10 @@ router.post("/add", (req, res) => {
     });
 });
 
+
+
+
+
 router.get("/getbyid/:id", (req, res) => {
   Model.findById(req.params.id)
     .then((data) => {

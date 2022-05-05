@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   Container,
+  Fab,
   FormControl,
   Grid,
   InputLabel,
@@ -19,7 +20,7 @@ import Swal from "sweetalert2";
 import app_config from "../../config";
 import update from "immutability-helper";
 import { Formik } from "formik";
-import { ExpandMoreSharp } from "@mui/icons-material";
+import { Delete, DeleteForever, ExpandMoreSharp, ViewAgenda } from "@mui/icons-material";
 
 const ManageFeedbacks = () => {
   const url = app_config.backend_url;
@@ -113,9 +114,25 @@ const ManageFeedbacks = () => {
                 return (
                   <Accordion key={_id}>
                     <AccordionSummary expandIcon={<ExpandMoreSharp />}>
-                      <Typography fontWeight={600}>{endDate}</Typography>
+                      <Typography fontWeight={600}>Added at {new Date(createdAt).toLocaleDateString()} {new Date(createdAt).toLocaleTimeString()}</Typography>
                     </AccordionSummary>
-                    <AccordionDetails></AccordionDetails>
+                    <AccordionDetails>
+                      {/* <Button className="mx-3" style={{background:"blue",color:"white",padding:"11px",borderRadius:"30px"}}>Views feedbacks</Button> */}
+                      <Fab
+                
+                variant="extended"
+                sx={{ background: "blue", color: "white",marginRight:"10px" }}
+              >
+                <ViewAgenda/> View feedbacks
+              </Fab>
+                      <Fab
+               
+                variant="extended"
+                sx={{ background: "red", color: "white" }}
+              >
+                <Delete /> Delete
+              </Fab>
+                    </AccordionDetails>
                   </Accordion>
                 );
               })}

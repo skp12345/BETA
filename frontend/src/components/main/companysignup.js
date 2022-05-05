@@ -39,10 +39,10 @@ const Companysignup = () => {
       <div
         className=" card"
         style={{
-          width: "22rem",
+          width: "28rem",
           borderRadius: "5px",
-          boxShadow: "3px 5px #888888",
-          margin: "50px auto",
+          boxShadow: "2px 2px 1px 3px rgba(0, 0, 0, 0.3)",
+          margin: "2rem auto",
           padding: "1rem",
           fontSize: ".9rem",
           // background: "rgb(76 175 80 / 14%)",
@@ -55,7 +55,7 @@ const Companysignup = () => {
                 <img
                   style={{
                     width: "6rem",
-                    marginLeft: "110px",
+                    marginLeft: "10rem",
                     borderRadius: "100%",
                     background: "rgb(76 175 80 / 14%)",
                   }}
@@ -103,7 +103,7 @@ const Companysignup = () => {
                   value={values.password}
                 />
               </div>
-              <div className="form-group mt-3">
+              <div className="form-group mt-1">
                 <TextField
                   size="small"
                   style={{ paddingBottom: "20px" }}

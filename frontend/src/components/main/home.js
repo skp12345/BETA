@@ -4,6 +4,7 @@ import Footer from "./footer";
 import Header from "./header1";
 import app_config from "../../config";
 import { Facebook, Google, Instagram, LinkedIn } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 
 const Mainhome = () => {
   const url = app_config.backend_url;
@@ -43,12 +44,12 @@ const Mainhome = () => {
                       products. Powered by a global community of 250,000+
                       real-world testers.
                     </p>
-                    <a
-                      href="/app/signin"
+                    <NavLink
+                      to="/main/login"
                       className="btn-get-started scrollto animate__animated animate__fadeInUp"
                     >
                       Get Started
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -192,8 +193,8 @@ const Mainhome = () => {
                       hand-in-hand from design to execution to ensure your test
                       is successful.
                     </p>
-                    <a
-                      href="/app/signin"
+                    <NavLink
+                      to="/main/login"
                       className="btn mt-1 w-50"
                       style={{
                         borderRadius: "20px",
@@ -205,7 +206,7 @@ const Mainhome = () => {
                       }}
                     >
                       Get Started
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

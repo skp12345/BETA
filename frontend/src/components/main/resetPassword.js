@@ -25,7 +25,7 @@ const ResetPassword = () => {
   const [currentUser, setCurrentUser] = useState({});
   const navigate = useNavigate();
 
-  const url = app_config.api_url;
+  const url = app_config.backend_url;
 
   const generateOTP = () => {
     let otp = parseInt(Math.random().toFixed(4).substr(`-${4}`));
@@ -64,8 +64,10 @@ const ResetPassword = () => {
   };
 
   const verifyUser = () => {
-    fetch(url + "/user/getbyemail/" + email)
+    console.log(email);
+    fetch(url + "/company/getbyemail/" + email)
       .then((res) => {
+        console.log(res.status);
         return res.json();
       })
       .then((data) => {
@@ -100,7 +102,7 @@ const ResetPassword = () => {
   };
 
   const resetPassword = ({ password }) => {
-    fetch(url + "/user/update/" + currentUser._id, {
+    fetch(url + "/company/update/" + currentUser._id, {
       method: "PUT",
       body: JSON.stringify({ password: password }),
       headers: { "Content-Type": "application/json" },
@@ -112,7 +114,7 @@ const ResetPassword = () => {
             icon: "success",
             title: "Password Reset Success!!",
           }).then(() => {
-            navigate("/main/login");
+            navigate("/main/companylogin");
           });
         return res.json();
       })
@@ -135,12 +137,11 @@ const ResetPassword = () => {
   const showResetForm = () => {
     if (showReset) {
       return (
-        <Card className="mt-5" sx={{ width: 451 }} align="center">
+        <Card className="mt-5 resetpassword" sx={{ width: 451 }} align="center">
           <CardContent align="center">
             <Formik
               initialValues={passwordForm}
               onSubmit={verifyOTP}
-              validationSchema={validationSchema}
             >
               {({ values, handleSubmit, handleChange, errors }) => (
                 <form onSubmit={handleSubmit}>
@@ -161,8 +162,7 @@ const ResetPassword = () => {
                     id="password"
                     type="password"
                     value={values.password}
-                    error={Boolean(errors.password)}
-                    helperText="Enter your Password please"
+                    
                     onChange={handleChange}
                     InputProps={{
                       endAdornment: (
@@ -188,8 +188,7 @@ const ResetPassword = () => {
                     id="confirm"
                     type="password"
                     value={values.confirm}
-                    error={errors.confirm}
-                    helperText={Boolean(errors.confirm)}
+                    
                     onChange={handleChange}
                     InputProps={{
                       endAdornment: (
