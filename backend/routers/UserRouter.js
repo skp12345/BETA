@@ -18,7 +18,16 @@ router.post("/add", (req, res) => {
 });
 
 
-
+router.get("/getbyemail/:email", (req, res) => {
+  Model.findOne({email : req.params.email})
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
 
 
 router.get("/getbyid/:id", (req, res) => {
