@@ -101,6 +101,7 @@ function EnrolledTest() {
                         : "Add Your Feedback"}
                     </Button>
                     <Button
+                    className="mx-3"
                       color={expired(endDate) ? "error" : "success"}
                       variant="contained"
                     >
@@ -120,7 +121,7 @@ function EnrolledTest() {
       <div
         className="container card"
         style={{
-          width: "60rem",
+          width: "50rem",
           borderRadius: "5px",
           boxShadow: "3px 5px #888888",
           margin: "20px auto",
@@ -129,7 +130,16 @@ function EnrolledTest() {
           background:"#e9ecef"
         }}
       >
-        <h2>My Beta Test</h2>
+        <h2
+                      style={{
+                        textAlign: "center",
+                        color: "blue",
+                        marginBottom: "1.5rem",
+                        textShadow: "2px 1px #ff0000",
+                      }}
+                    >
+                      My Beta Test {" "}
+                    </h2>
         {displayData()}
       </div>
     </div>

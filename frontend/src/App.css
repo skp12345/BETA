@@ -216,7 +216,10 @@
 
 .userback{
   /* background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg); */
-  background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);  height: 110vh;
+  /* background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);   */
+  height: 120vh;
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+
   width: 100%;
   /* padding-top: 20px; */
   background-repeat: no-repeat;
