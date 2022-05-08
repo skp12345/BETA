@@ -2,10 +2,6 @@ const multer = require("multer");
 const router = require("express").Router();
 const { SMTPClient } = require("emailjs");
 
-router.post("/uploadfile", myStorage.single("myfile"), (req, res) => {
-  res.status(200).json({ status: "success" });
-});
-
 const initMail = () => {
   return new SMTPClient({
     user: "yourmail@gmail.com",
@@ -22,7 +18,6 @@ const sendMail = (to, subject, text) => {
       text: text,
       from: "yourmail@mail.com",
       to: to,
-
       cc: "",
       subject: subject,
     },
