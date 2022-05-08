@@ -20,7 +20,13 @@ import Swal from "sweetalert2";
 import app_config from "../../config";
 import update from "immutability-helper";
 import { Formik } from "formik";
-import { Delete, DeleteForever, ExpandMoreSharp, ViewAgenda } from "@mui/icons-material";
+import {
+  Delete,
+  DeleteForever,
+  ExpandMoreSharp,
+  ViewAgenda,
+} from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const ManageFeedbacks = () => {
   const url = app_config.backend_url;
@@ -53,7 +59,7 @@ const ManageFeedbacks = () => {
     fetch(url + "/beta/getbycompany/" + currentUser._id)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setBetaList(data);
         // setSelectedBeta(data[0]._id);
         setLoading(false);
@@ -63,6 +69,8 @@ const ManageFeedbacks = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const navigate = useNavigate();
 
   const displayBetaSelector = () => {
     if (!loading && betaList.length !== 0) {
@@ -114,24 +122,30 @@ const ManageFeedbacks = () => {
                 return (
                   <Accordion key={_id}>
                     <AccordionSummary expandIcon={<ExpandMoreSharp />}>
-                      <Typography fontWeight={600}>Added at {new Date(createdAt).toLocaleDateString()} {new Date(createdAt).toLocaleTimeString()}</Typography>
+                      <Typography fontWeight={600}>
+                        Added at {new Date(createdAt).toLocaleDateString()}{" "}
+                        {new Date(createdAt).toLocaleTimeString()}
+                      </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       {/* <Button className="mx-3" style={{background:"blue",color:"white",padding:"11px",borderRadius:"30px"}}>Views feedbacks</Button> */}
                       <Fab
-                
-                variant="extended"
-                sx={{ background: "blue", color: "white",marginRight:"10px" }}
-              >
-                <ViewAgenda/> View feedbacks
-              </Fab>
+                        variant="extended"
+                        onClick={(e) => navigate("/main/viewresponse/" + _id)}
+                        sx={{
+                          background: "blue",
+                          color: "white",
+                          marginRight: "10px",
+                        }}
+                      >
+                        <ViewAgenda /> View feedbacks
+                      </Fab>
                       <Fab
-               
-                variant="extended"
-                sx={{ background: "red", color: "white" }}
-              >
-                <Delete /> Delete
-              </Fab>
+                        variant="extended"
+                        sx={{ background: "red", color: "white" }}
+                      >
+                        <Delete /> Delete
+                      </Fab>
                     </AccordionDetails>
                   </Accordion>
                 );
