@@ -4,8 +4,8 @@ const { SMTPClient } = require("emailjs");
 
 const initMail = () => {
   return new SMTPClient({
-    user: "yourmail@gmail.com",
-    password: "uvzuapdfsegbdctg",
+    user: "surajanshraj@gmail.com",
+    password: "rnagtvltxxaavwpu",
     host: "smtp.gmail.com",
     ssl: true,
   });
@@ -16,7 +16,7 @@ const sendMail = (to, subject, text) => {
   client.send(
     {
       text: text,
-      from: "yourmail@mail.com",
+      from: "surajanshraj@mail.com",
       to: to,
       cc: "",
       subject: subject,

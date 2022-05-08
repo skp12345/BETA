@@ -18,6 +18,7 @@ router.post("/add", (req, res) => {
 });
 router.post("/authenticate", (req, res) => {
   const formdata = req.body;
+  console.log(formdata);
 
   Model.findOne({ email: formdata.email, password: formdata.password })
     .then((data) => {
@@ -34,6 +35,34 @@ router.post("/authenticate", (req, res) => {
       res.status(500).json(err);
     });
 });
+
+
+router.put("/update/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.get("/getbyemail/:email", (req, res) => {
+  Model.findOne({email : req.params.email})
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+
+
+
+
 
 router.get("/getall", (req, res) => {
   // console.log(req.body);

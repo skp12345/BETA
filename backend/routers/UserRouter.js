@@ -17,8 +17,32 @@ router.post("/add", (req, res) => {
     });
 });
 
+
+router.get("/getbyemail/:email", (req, res) => {
+  Model.findOne({email : req.params.email})
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+
 router.get("/getbyid/:id", (req, res) => {
   Model.findById(req.params.id)
+    .then((data) => {
+      console.log(data);
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
+
+router.put("/update/:id", (req, res) => {
+  Model.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then((data) => {
       console.log(data);
       res.status(200).json(data);

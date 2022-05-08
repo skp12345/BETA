@@ -77,10 +77,10 @@ function EnrolledTest() {
             <AccordionDetails>
               <h5>Username : {description}</h5>
               <h5>Type : {type}</h5>
-              <h5>Link : {link}</h5>
+              <h5>Link : <a style={{display:"inline"}} href={link}>{link}</a> </h5> 
               <h5>Created At : {timeAgo.format(new Date(createdAt))}</h5>
 
-              <h3 className="mt-5">Feedback Forms for this test</h3>
+              <h4 className="mt-5">Feedback Forms for this test</h4>
               <hr />
               {forms.map(({ _id, answers, endDate, createdAt }) => (
                 <Accordion>
@@ -101,6 +101,7 @@ function EnrolledTest() {
                         : "Add Your Feedback"}
                     </Button>
                     <Button
+                    className="mx-3"
                       color={expired(endDate) ? "error" : "success"}
                       variant="contained"
                     >
@@ -120,15 +121,25 @@ function EnrolledTest() {
       <div
         className="container card"
         style={{
-          width: "60rem",
+          width: "50rem",
           borderRadius: "5px",
           boxShadow: "3px 5px #888888",
           margin: "20px auto",
           padding: "2rem",
-          background: "rgb(76 175 80 / 14%)",
+          // background: "rgb(76 175 80 / 14%)",
+          background:"#e9ecef"
         }}
       >
-        <h1>My Beta Test</h1>
+        <h2
+                      style={{
+                        textAlign: "center",
+                        color: "blue",
+                        marginBottom: "1.5rem",
+                        textShadow: "2px 1px #ff0000",
+                      }}
+                    >
+                      My Beta Test {" "}
+                    </h2>
         {displayData()}
       </div>
     </div>

@@ -153,7 +153,9 @@
 
 .main-back{
   background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
-  height: 100vh;
+  /* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+  height: 125vh;
+  width: 100%;
   /* padding-top: 20px; */
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,9 +165,76 @@
 
 .company-signup{
   background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
-  height: 117vh;
+  height: 125vh;
+  width: 100%;
   /* padding-top: 20px; */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+/* .company-login{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 110vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+
+
+.password{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 102vh;
+  width: 100%;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.user-signup{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 98vh;
+  width: 100%;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.user-login{
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+  height: 98vh;
+  width: 100%;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;  
+}
+
+
+.userback{
+  /* background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg); */
+  /* background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);   */
+  height: 120vh;
+  background: url(https://xd.adobe.com/ideas/wp-content/uploads/2019/10/AdobeStock_113453008-1169x650.jpeg);
+
+  width: 100%;
+  /* padding-top: 20px; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* .resetpassword{
+  background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);  height: 120vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+} */
+
+  .shadow {
+    box-shadow: -3px -5px shadowpx rgb(red, green, rgb(199, 194, 194));
+  }

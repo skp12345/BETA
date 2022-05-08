@@ -18,7 +18,7 @@ const User = () => {
   ];
 
   return (
-    <div>
+    <div className="userback">
       <Sidebar sidebarOptions={sidebarOptions} title="User Dashboard">
         <Outlet />
       </Sidebar>

@@ -140,7 +140,7 @@ const Login = () => {
               </Button>
               <div className="mt-3">
                 <span>Forgotten PassWord ? </span>{" "}
-                <NavLink style={{ fontSize: "1rem" }} to="">
+                <NavLink style={{ fontSize: "1rem" }} to="/main/userresetpassword">
                   <b>Click Here</b>
                 </NavLink>
               </div>

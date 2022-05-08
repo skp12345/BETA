@@ -15,8 +15,9 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { LocalGasStationOutlined, Login, LoginOutlined, LoginSharp } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -101,8 +102,8 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
     </Menu>
   );
 
@@ -123,15 +124,15 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      {/* <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+      </MenuItem> */}
+      {/* <MenuItem>
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
@@ -142,10 +143,10 @@ export default function PrimarySearchAppBar() {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/signup")}
+          onClick={e => navigate("/main/signup")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -154,11 +155,27 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Signup</p>
+        {/* <p>Signup</p> */}
+        <NavLink to="/main/signup">SignUp</NavLink>
+
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/login")}
+        
+        onClick={e => navigate("/main/login")}
+        size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
+        <NavLink to="/main/login">Login</NavLink>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          onClick={e => navigate("/main/companysignup")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -167,11 +184,11 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Login</p>
+        <NavLink to="/main/companysignup"> Company SignUp</NavLink>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          onClick={(e) => navigate("/main/companysignup")}
+          onClick={e => navigate("/main/companylogin")}
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
@@ -180,29 +197,16 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Company Signup</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          onClick={(e) => navigate("/main/companylogin")}
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Company Login</p>
+        <NavLink to="/main/companylogin">Company Login</NavLink>
       </MenuItem>
     </Menu>
   );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar  style={{backgroundColor: "#404040"}} position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -210,32 +214,37 @@ export default function PrimarySearchAppBar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { sm: "block" } }}
           >
-            MUI
+            β-Testing
           </Typography>
-          <Button color="inherit" onClick={(e) => navigate("/main/home")}>
+          <Button color="inherit" sx={{ml: 3}} onClick={(e) => navigate("/main/Mainhome")}>
             Home
+          </Button>
+          <Button color="inherit" sx={{ml: 3}} onClick={(e) => navigate("/main/betalisting")}>
+            Browse BETA Tests
           </Button>
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={(e) => navigate("/main/login")}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+           
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companysignup")}>
+              Company Signup
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/companylogin")}>
+              Company Login
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/signup")}>
+              User Signup
+            </Button>
+            <Button sx={{ml: 2}} color="inherit" onClick={e => navigate("/main/login")}>
+              User Login
+            </Button>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

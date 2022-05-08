@@ -1,7 +1,7 @@
 import { Add, Edit, NoteAdd } from "@mui/icons-material";
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "../sidebar";
+import Sidebar from "./sidebar";
 
 const Company = () => {
   const sidebarOptions = [
