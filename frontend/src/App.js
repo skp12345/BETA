@@ -27,6 +27,7 @@ import Header1 from "./components/main/header1";
 import Feedback from "./components/user/feedback";
 import UserResetPassword from "./components/main/userresetpassword";
 import Googlelogin from "./components/main/googlelogin";
+import ViewResponses from "./components/company/viewResponses";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -34,7 +35,6 @@ function App() {
     <div>
       <BrowserRouter>
         {/* <Toaster position="top-right" /> */}
-        
 
         <Routes>
           <Route element={<Googlelogin></Googlelogin>} path="Googlelogin" ></Route>
@@ -51,11 +51,10 @@ function App() {
             <Route element={<ManageTest />} path="managetest" />
             <Route element={<Companydashboard />} path="companydashboard" />
             <Route element={<ManageFeedbacks />} path="managefeedbacks" />
-
           </Route>
           <Route element={<User />} path="user">
             <Route element={<EnrolledTest />} path="enrolled" />
-            <Route element={<Feedback></Feedback>} path="Feedback"/>
+            <Route element={<Feedback></Feedback>} path="Feedback" />
           </Route>
 
           <Route element={<Main />} path="main">
@@ -65,11 +64,17 @@ function App() {
             <Route element={<Mainhome />} path="Mainhome" />
             <Route element={<Companylogin />} path="companylogin" />
             <Route element={<Companysignup />} path="companysignup" />
+            <Route element={<ViewResponses />} path="viewresponse/:formid" />
             <Route element={<Login />} path="Login" />
             <Route element={<SignUp />} path="SignUP" />
-            <Route element={<ResetPassword></ResetPassword>} path="ResetPassword"/>
-            <Route element={<UserResetPassword></UserResetPassword>} path="UserResetPassword"/>
-            
+            <Route
+              element={<ResetPassword></ResetPassword>}
+              path="ResetPassword"
+            />
+            <Route
+              element={<UserResetPassword></UserResetPassword>}
+              path="UserResetPassword"
+            />
           </Route>
 
           <Route element={<Navigate to="/main/Mainhome" />} path="/" />

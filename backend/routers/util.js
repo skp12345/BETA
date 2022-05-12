@@ -1,7 +1,6 @@
 const multer = require("multer");
 const router = require("express").Router();
-const {SMTPClient}  = require("emailjs");
-
+const { SMTPClient } = require("emailjs");
 
 const initMail = () => {
   return new SMTPClient({
@@ -19,7 +18,6 @@ const sendMail = (to, subject, text) => {
       text: text,
       from: "surajanshraj@mail.com",
       to: to,
-
       cc: "",
       subject: subject,
     },

@@ -53,6 +53,13 @@ router.get("/getall", (req, res) => {
 
 router.get("/getbyid/:id", (req, res) => {
   Model.findById(req.params.id)
+    .populate({
+      path: "answers",
+      populate: {
+        path: "user",
+        model: "users",
+      },
+    })
     .then((data) => {
       // console.log(data);
       res.status(200).json(data);
