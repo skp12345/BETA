@@ -71,7 +71,7 @@ function BetaDetails() {
         <div
           className="container card "
           style={{
-            width: "50rem",
+            width: "150vh",
             borderRadius: "5px",
             boxShadow: "3px 5px #888888",
             margin: "20px auto",
@@ -80,10 +80,20 @@ function BetaDetails() {
             // background: "rgb(76 175 80 / 14%)",
           }}
         >
-          <h1>Beta Test Details</h1>
+          <h2
+          style={{
+            textAlign: "center",
+            color: "blue",
+            padding: "1rem",
+            textShadow: "2px 1px #ff0000",
+          }}
+          >
+            Beta Test Details
+            </h2>
           <div class="row">
             <div className="col-sm-6 col-md-4 col-lg-4">
               <img
+              
                 className="img-fluid"
                 src={url + "/uploads/" + betaData.thumbnail}
                 alt={betaData.title}

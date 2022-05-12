@@ -121,7 +121,7 @@ function EnrolledTest() {
       <div
         className="container card"
         style={{
-          width: "50rem",
+          width: "55rem",
           borderRadius: "5px",
           boxShadow: "3px 5px #888888",
           margin: "20px auto",

@@ -26,6 +26,7 @@ import ResetPassword from "./components/main/resetPassword";
 import Header1 from "./components/main/header1";
 import Feedback from "./components/user/feedback";
 import UserResetPassword from "./components/main/userresetpassword";
+import Googlelogin from "./components/main/googlelogin";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -36,6 +37,7 @@ function App() {
         
 
         <Routes>
+          <Route element={<Googlelogin></Googlelogin>} path="Googlelogin" ></Route>
 <Route element={<Header1></Header1>} path="Header1"></Route>
 
 
