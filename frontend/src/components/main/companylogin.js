@@ -79,8 +79,8 @@ const Companylogin = () => {
                 ></img>
               </div>
           <h3  className="text-center" style={{margin:"20px"}}>Login Here</h3>
-          <div className="row mt-3 mb-5">
-            <div className="col-md-6 mt-1">
+          <div className="row mt-3 mb-1">
+            {/* <div className="col-md-6 mt-1">
               <Button
                 variant="contained"
                 color="error"
@@ -89,8 +89,8 @@ const Companylogin = () => {
               >
                 Google
               </Button>
-            </div>
-            <div className="col-md-6 mt-1">
+            </div> */}
+            {/* <div className="col-md-6 mt-1">
               <Button
                 variant="contained"
                 className="w-100"
@@ -98,9 +98,9 @@ const Companylogin = () => {
               >
                 Facebook
               </Button>
-            </div>
+            </div> */}
           </div>
-          <h4 className="text-center mt-4">OR</h4>
+          {/* <h4 className="text-center mt-4">OR</h4> */}
 
           <Formik initialValues={loginForm} onSubmit={loginSubmit}>
             {({ values, handleChange, handleSubmit }) => (

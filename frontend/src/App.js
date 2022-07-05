@@ -17,7 +17,6 @@ import Login from "./components/main/login";
 import SignUp from "./components/main/signup";
 import en from "javascript-time-ago/locale/en.json";
 import TimeAgo from "javascript-time-ago";
-import { Toaster } from "react-hot-toast";
 import EnrolledTest from "./components/user/enrolledTest";
 import User from "./components/user";
 import ManageFeedbacks from "./components/company/manageFeedbacks";
@@ -28,7 +27,9 @@ import Feedback from "./components/user/feedback";
 import UserResetPassword from "./components/main/userresetpassword";
 import Googlelogin from "./components/main/googlelogin";
 import ViewResponses from "./components/company/viewResponses";
-import AdminProfile from "./components/admin/profile";
+import Profile from "./components/user/profile";
+
+
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -39,9 +40,10 @@ function App() {
 
         <Routes>
 
-{/* <Route element={<AdminProfile></AdminProfile>} path="AdminProfile" ></Route> */}
+{/* <Route element={<AdminProfile></AdminProfile>} path="AdminProfile"></Route> */}
 
-          <Route element={<Googlelogin></Googlelogin>} path="Googlelogin" ></Route>
+<Route element={<Googlelogin></Googlelogin>} path="Googlelogin"></Route>
+
 <Route element={<Header1></Header1>} path="Header1"></Route>
 
 
@@ -60,7 +62,7 @@ function App() {
             <Route element={<EnrolledTest />} path="enrolled" />
             {/* <Route elemment={<} */}
             <Route element={<Feedback></Feedback>} path="Feedback" />
-            <Route element={<AdminProfile></AdminProfile>} path="AdminProfile"></Route>
+            <Route element={<Profile></Profile>} path="Profile"/>
           </Route>
 
           <Route element={<Main />} path="main">
