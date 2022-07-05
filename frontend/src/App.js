@@ -28,6 +28,7 @@ import Feedback from "./components/user/feedback";
 import UserResetPassword from "./components/main/userresetpassword";
 import Googlelogin from "./components/main/googlelogin";
 import ViewResponses from "./components/company/viewResponses";
+import AdminProfile from "./components/admin/profile";
 
 function App() {
   TimeAgo.addDefaultLocale(en);
@@ -37,6 +38,9 @@ function App() {
         {/* <Toaster position="top-right" /> */}
 
         <Routes>
+
+{/* <Route element={<AdminProfile></AdminProfile>} path="AdminProfile" ></Route> */}
+
           <Route element={<Googlelogin></Googlelogin>} path="Googlelogin" ></Route>
 <Route element={<Header1></Header1>} path="Header1"></Route>
 
@@ -54,7 +58,9 @@ function App() {
           </Route>
           <Route element={<User />} path="user">
             <Route element={<EnrolledTest />} path="enrolled" />
+            {/* <Route elemment={<} */}
             <Route element={<Feedback></Feedback>} path="Feedback" />
+            <Route element={<AdminProfile></AdminProfile>} path="AdminProfile"></Route>
           </Route>
 
           <Route element={<Main />} path="main">
